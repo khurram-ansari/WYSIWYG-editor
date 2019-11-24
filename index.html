@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Text Editor</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<div id='mytxteditor'>
+  Select some text and click the button to make it bold...Or write your own text
+</div>
+<button id="btn" >Ok</button>
+<div id="content"></div>
+ <!-- link js file -->
+<script type="text/javascript" src="txteditor.js"></script>
+
+<script type="text/javascript">
+	init_txtarea("#mytxteditor"); // initialize with the selector of div element
+
+	// get html content
+	$("#btn").click(function(){
+	var myhtml=get_content();
+	$("#content").html(myhtml);
+	});
+	
+</script>
+</body>
+</html>
